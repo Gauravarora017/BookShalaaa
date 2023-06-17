@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 import InputControl from "../InputControl/InputControl";
 import { auth } from "../../firebase";
@@ -27,14 +28,28 @@ function Login() {
     signInWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
         setSubmitButtonDisabled(false);
-        
-        navigate("/");
+        navigate("/home1");
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
         setErrorMsg(err.message);
       });
   };
+
+  const handleGoogleSignIn = () => {
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+
+    signInWithPopup(auth, provider)
+      .then((res) => {
+        // Additional logic if needed
+        navigate("/home1");
+      })
+      .catch((err) => {
+        setErrorMsg(err.message);
+      });
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.innerBox}>
@@ -59,6 +74,9 @@ function Login() {
           <b className={styles.error}>{errorMsg}</b>
           <button disabled={submitButtonDisabled} onClick={handleSubmission}>
             Login
+          </button>
+          <button onClick={handleGoogleSignIn} disabled={submitButtonDisabled}>
+            Sign in with Google
           </button>
           <p>
             Already have an account?{" "}

@@ -27,6 +27,8 @@
 }
 .book-details-item{
     margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: row;
 }
 .book-details-item.description{
     opacity: 0.8;
@@ -61,6 +63,7 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-right: 16px;
   }
   
   .add-to-cart-button:hover {
