@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/BookShala/static/css/main.49fc535e.css",
+    "main.js": "/BookShala/static/js/main.2c3a38a5.js",
+    "static/media/cover_not_found.jpg": "/BookShala/static/media/cover_not_found.69846940c7af3e651508.jpg",
+    "static/media/about-img.jpg": "/BookShala/static/media/about-img.b7521da541400a1eefdb.jpg",
+    "static/media/lib.png": "/BookShala/static/media/lib.e47e0362117197b5b187.png",
+    "index.html": "/BookShala/index.html",
+    "static/media/loader.svg": "/BookShala/static/media/loader.a3343f12420f3160e32c5317638f2198.svg",
+    "main.49fc535e.css.map": "/BookShala/static/css/main.49fc535e.css.map",
+    "main.2c3a38a5.js.map": "/BookShala/static/js/main.2c3a38a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49fc535e.css",
+    "static/js/main.2c3a38a5.js"
+  ]
+}
